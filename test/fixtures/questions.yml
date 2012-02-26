@@ -1,0 +1,25 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  title: MyString
+  video_url: MyString
+  option_1: MyString
+  option_2: MyString
+  option_3: MyString
+  option_4: MyString
+  option_5: MyString
+  option_6: MyString
+  option_7: MyString
+  option_8: MyString
+
+two:
+  title: MyString
+  video_url: MyString
+  option_1: MyString
+  option_2: MyString
+  option_3: MyString
+  option_4: MyString
+  option_5: MyString
+  option_6: MyString
+  option_7: MyString
+  option_8: MyString
