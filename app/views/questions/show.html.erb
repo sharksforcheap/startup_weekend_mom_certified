@@ -59,10 +59,10 @@ $(document).ready(function() {
     <div class="verbal_rep">
       <span>Question</span>
       <span><%= @question.id %></span>
-      <span>of 5</span>
+      <span>of 4</span>
     </div>
     <div class="visual_rep">
-      <% 5.times do |i|%>
+      <% 4.times do |i|%>
         <div class="box <%= (i + 1) == @question.id ? 'special' : 'normal'%>"></div>
       <% end %>
     </div>
@@ -74,7 +74,9 @@ $(document).ready(function() {
       <button class="btn" id="button1"><%= @question.option_1 %></button><br />
       <button class="btn" id="button2"><%= @question.option_2 %></button><br />
       <button class="btn" id="button3"><%= @question.option_3 %></button><br />
-      <button class="btn" id="button4"><%= @question.option_4 %></button><br />
+      <% if @question.option_4 != '' %>
+        <button class="btn" id="button4"><%= @question.option_4 %></button><br />
+      <% end %>
     </div>
 
     <div class="video">

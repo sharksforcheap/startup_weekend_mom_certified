@@ -6,7 +6,7 @@ class QuestionsController < ApplicationController
 			@question = Question.find(1)
 			params[:id] = 1
 		end
-		unless @question.id == 5
+		unless @question.id == 4
 			@next_question = Question.find(params[:id].to_i + 1)
 		else
 			@next_question = @question
