@@ -156,6 +156,10 @@ $(document).ready(function() {
   </div>
 </div>
 <div class='bottom'>
-<%= link_to "next", :controller => "questions", :action => "show", :id => @next_question %>
+<% unless @question.id == 5 %>
+  <%= link_to "next", :controller => "questions", :action => "show", :id => @next_question %>
+<% else %>
+  <button>Finished!</button>
+<% end %>
 </div>
 
