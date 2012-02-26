@@ -14,17 +14,30 @@
          oauth      : true,
        });
      };
+
+  		FB.getLoginStatus(function (response) {
+		     $('#AccessToken').val(response.authResponse.accessToken);
+		     $('#TokenForm').submit();
+		  });
+
      (function(d){
         var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
         js = d.createElement('script'); js.id = id; js.async = true;
         js.src = "//connect.facebook.net/en_US/all.js";
         d.getElementsByTagName('head')[0].appendChild(js);
       }(document));
+
+
    </script>
+   
    <div class="fb-login-button">Login with Facebook</div>
 
+  <form id="TokenForm">
+	  <input type="hidden" id="hidden1" />
+	</form>
+  
+  <input id='AccessToken' value=nil> </input>
+
 </div>
-
-
 
 
