@@ -1,9 +1,11 @@
 MomAndDad::Application.routes.draw do
+  resources :users
   get "pages/home"
 
   get "pages/about"
 
   get "pages/contact"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
