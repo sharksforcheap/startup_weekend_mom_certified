@@ -19,12 +19,7 @@
 	text-decoration:none;
 	text-shadow:1px 1px 0px #ffffff;
 }
-.btn:hover {
-	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
-	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
-	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
-	background-color:#dfdfdf;
-}
+
 .btn:active {
 	position:relative;
 	top:1px;
@@ -40,12 +35,11 @@
 	border-radius:23px;
 	border:3px solid #dcdcdc;
 	display:inline-block;
-	color:#777777;
 	font-family:arial;
 	font-size:18px;
 	font-weight:bold;
-	margin-left:50px;
-	margin-top:45px;
+	margin-left:10px;
+	margin-top:35px;
 	padding:10px 20px;
 	text-decoration:none;
 	text-shadow:1px 1px 0px #ffffff;
@@ -101,10 +95,15 @@
 .visual_rep{
   float:right;
 }
+.special{
+  background-color:#009900;
+}
+.normal{
+  background-color:#333333;
+}
 .box{
   width:35px;
   height:35px;
-  background-color:#333333;
   float:left;
   margin-top:-12px;
   margin-right:10px;
