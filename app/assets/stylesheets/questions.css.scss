@@ -14,7 +14,7 @@
 	font-size:18px;
 	font-weight:bold;
 	margin-left:10px;
-	margin-top:35px;
+	margin-top:5px;
 	padding:10px 20px;
 	text-decoration:none;
 	text-shadow:1px 1px 0px #ffffff;
@@ -39,7 +39,7 @@
 	font-size:18px;
 	font-weight:bold;
 	margin-left:10px;
-	margin-top:35px;
+	margin-top:5px;
 	padding:10px 20px;
 	text-decoration:none;
 	text-shadow:1px 1px 0px #ffffff;
@@ -49,6 +49,7 @@
   width:300px;
   height:400px;
   float:left;
+  padding-top:20px;
 }
 .video{
   width:630px;
@@ -81,10 +82,13 @@
   padding-top:20px;
   font-size:230%;
 }
+.title{
+  height:80px;
+}
 .progress_bar{
   width:430px;
   float:right;
-  margin-top:70px;
+  margin-top:20px;
   padding-top:12px;
 }
 .verbal_rep{
