@@ -17,7 +17,6 @@
 
   		FB.getLoginStatus(function (response) {
 		     $('#AccessToken').val(response.authResponse.accessToken);
-		     $('#TokenForm').submit();
 		  });
 
      (function(d){
@@ -32,11 +31,6 @@
    
    <div class="fb-login-button">Login with Facebook</div>
 
-  <form id="TokenForm">
-	  <input type="hidden" id="hidden1" />
-	</form>
-  
-  <input id='AccessToken' value=nil> </input>
 
 </div>
 
