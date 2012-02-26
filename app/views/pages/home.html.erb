@@ -5,6 +5,7 @@
 	
 <div id="fb-root"></div>
    <script>
+   $('document').ready(function(){
      window.fbAsyncInit = function() {
        FB.init({
          appId      : '110489365742004',
@@ -22,19 +23,34 @@
         d.getElementsByTagName('head')[0].appendChild(js);
       }(document));
 
-  		FB.getLoginStatus(function (response) {
-		     $('#AccessToken').value('response.authResponse.accessToken');
-		     $('#TokenForm').submit();
-		  });
+
+
+			FB.getLoginStatus(function (response) {
+					     $('#AccessToken').val(response.authResponse.accessToken);
+					     //$('#TokenForm').submit();
+					  });
+		// //$(document).ready(fucntion(){
+		// 			$('.thing').hover(function(){
+		// 	     $('#AccessToken').val('does this work?');
+		// 	     //$('#TokenForm').submit();
+		// 				alert('hi');
+		// 			},function(){
+		// 			  $('#AccessToken').val('it worked!!');
+		// 			
+		// 			});
 		
-   </script>
-   
+	});
+	  </script>
+
+
+
    <div class="fb-login-button">Login with Facebook</div>
 </div>
 
 
-<form id="TokenForm">
-  <input id='AccessToken' value='nil' type="hidden" id="hidden1" />
+<form action="user/new" id="TokenForm">
+	<!-- <div style="width:200px;height:200px;background-color:orange;" class="thing"></div> -->
+  <input  id='AccessToken' value='nil' type="hidden" id="hidden1" />
 </form>
 
 
