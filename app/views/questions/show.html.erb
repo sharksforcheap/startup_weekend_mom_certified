@@ -17,24 +17,62 @@
 	font-weight:bold;
 	margin-left:50px;
 	margin-top:45px;
-	padding:10px 20px;
+	padding:10px 12% 10px 10px;
 	text-decoration:none;
 	text-shadow:1px 1px 0px #ffffff;
-}.btn:hover {
+}
+
+.btn:hover {
 	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
 	background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
 	background-color:#dfdfdf;
-}.btn:active {
+}
+
+.btn:active {
 	position:relative;
 	top:1px;
 }
+
+.clicked {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c8e6ac), color-stop(1, #c8e6ac) );
+	background:-moz-linear-gradient( center top, #c8e6ac 100%, #dfdfdf 0% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c8e6ac', endColorstr='#dfdfdf');
+	background-color:#c8e6ac;
+	-moz-border-radius:23px;
+	-webkit-border-radius:23px;
+	border-radius:23px;
+	border:3px solid #dcdcdc;
+	display:inline-block;
+	color:#777777;
+	font-family:arial;
+	font-size:18px;
+	font-weight:bold;
+	margin-left:50px;
+	margin-top:45px;
+	padding:10px 12% 10px 10px;
+	text-decoration:none;
+	text-shadow:1px 1px 0px #ffffff;
+
+}
 </style>
 <br>
-<button class="btn"><%= @question.option_1 %></button><br />
-<button class="btn"><%= @question.option_2 %></button><br />
-<button class="btn"><%= @question.option_3 %></button><br />
-<button class="btn"><%= @question.option_4 %></button><br />
+<button class="btn" id="button1"><%= @question.option_1 %></button><br />
+<button class="btn" id="button2"><%= @question.option_2 %></button><br />
+<button class="btn" id="button3"><%= @question.option_3 %></button><br />
+<button class="btn" id="button4"><%= @question.option_4 %></button><br />
+
+<script type="text/javascript">
+$(document).ready(function() {
+	$(".btn").click(function() {
+		var idname = this.id;
+			$("#"+idname).addClass("clicked");
+			$("#"+idname).siblings().removeClass("clicked")
+	})
+
+})
+</script>
+
 
 <style>
 
