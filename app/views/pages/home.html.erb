@@ -5,7 +5,7 @@
 	
 <div id="fb-root"></div>
    <script>
-   $('document').ready(function(){
+   
      window.fbAsyncInit = function() {
        FB.init({
          appId      : '110489365742004',
@@ -24,7 +24,7 @@
       }(document));
 
 
-
+$('document').ready(function(){
 			FB.getLoginStatus(function (response) {
 					     $('#AccessToken').val('hello');
 					     //$('#TokenForm').submit();
