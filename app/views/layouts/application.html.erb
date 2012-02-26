@@ -7,38 +7,50 @@
   <%= csrf_meta_tags %>
 
 <style>
-body{
-	background-color:#ADD8E6;
-}
-
-#title{
-	margin-left:auto;
-	margin-right:auto;
-	width:500px;
-}
-
-#main_container{
-	padding: 30px;
-	width:960px;
-	height:500px; #delete later
-	-moz-border-radius: 40px;
-	border-radius: 40px;
-	background-color: white;
-	margin-left:auto;
-	margin-right:auto;
-	-moz-box-shadow: 10px 10px 5px #888;
-	-webkit-box-shadow: 10px 10px 5px #888;
-	box-shadow: 10px 10px 5px #888;
-}
+	#title{
+		margin-left:auto;
+		margin-right:auto;
+		width:500px;
+	}
+  body{
+  	background-color:#fdfdfd;
+  }
+	#main_container{
+		padding: 30px;
+		width:960px;
+		height:500px; #delete later
+		-moz-border-radius: 40px;
+		border-radius: 40px;
+		background-color: white;
+		margin-left:auto;
+		margin-right:auto;
+		-moz-box-shadow: 10px 10px 5px #888;
+		-webkit-box-shadow: 10px 10px 5px #888;
+		box-shadow: 10px 10px 5px #888;
+	}
+	.banner{
+		padding-top:22px;
+	  background-color:#009900;
+	  height:56px;
+	}
+	.logo{
+    margin-left:auto;
+		margin-right:auto;
+		width:960px;
+		padding-left:10px;
+  }
 
 </style>
 
 
 </head>
 <body>
-<div id="main_container">
-		<%= yield %>
-</div>
+	<div class="banner">
+	  <div class='logo'>
+    <%= image_tag("logo.png") %>
+	  </div>
+	</div>
 
+	<%= yield %>
 </body>
 </html>
