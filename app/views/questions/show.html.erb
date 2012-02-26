@@ -10,7 +10,49 @@ $(document).ready(function() {
 </script>
 
 <%= stylesheet_link_tag "questions" %>
-
+<style>
+  .next_button{
+    background-image:url("/assets/next-button.png");
+    width:176px;
+    height:53px;
+    float:right;
+    color:black;
+  }
+  .button_text{
+    margin-left:auto;
+    margin-right:auto;
+    width:130px;
+    height:50px;
+    font-size:140%;
+    text-decoration:none;
+    margin-top:-5px;
+  }
+  .bottom{
+    width:250px;
+    height:200px;
+    margin-left:150px;
+  }
+  #back_button{
+    float:left;
+    height:40px;
+    width:40px;
+    text-decoration:none;
+    font-size:150%;
+    color:#666666;
+  }
+  .a{
+    text-decoration:none;
+  }
+  .results_text{
+    margin-left:auto;
+    margin-right:auto;
+    width:75px;
+    height:50px;
+    font-size:140%;
+    text-decoration:none;
+    margin-top:-5px;
+  }
+</style>
 <div class="title_progress_bar">
   <div class="title"><%= @question.title %></div>
   <div class="progress_bar">
@@ -41,10 +83,29 @@ $(document).ready(function() {
   </div>
 </div>
 <div class='bottom'>
+<% unless @question.id == 1 %>
+  <a href="/questions/<%= @previous_question.id %>">
+    <div id="back_button">
+      <p>Back</p>
+    </div>
+  </a>
+<% end %>
 <% unless @question.id == 5 %>
-  <%= link_to "next", :controller => "questions", :action => "show", :id => @next_question %>
+  <a href="/questions/<%= @next_question.id %>">
+    <div class="next_button">
+      <div class="button_text">
+        <p>Next Question</p>
+      </div>
+    </div>
+  </a>
 <% else %>
-  <button>Finished!</button>
+  <a href="/pages/about">
+    <div class="next_button">
+      <div class="results_text">
+        <p>Results!</p>
+      </div>
+    </div>
+  </a>
 <% end %>
 </div>
 
