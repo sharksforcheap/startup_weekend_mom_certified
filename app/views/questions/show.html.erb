@@ -9,15 +9,7 @@ $(document).ready(function() {
 })
 </script>
 
-<style> 
-  .btn {
-  	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
-  	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
-  	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
-  	background-color:#ededed;
-  	-moz-border-radius:23px;
-  	-webkit-border-radius:23px;
-  	border-radius:23px;
+<%= stylesheet_link_tag "questions" %>
 
   	border:3px solid #dcdcdc;
   	display:inline-block;
@@ -121,6 +113,7 @@ $(document).ready(function() {
     margin-right:10px;
   }
 </style>
+
 <div class="title_progress_bar">
   <div class="title"><%= @question.title %></div>
   <div class="progress_bar">
