@@ -15,10 +15,6 @@
        });
      };
 
-  		FB.getLoginStatus(function (response) {
-		     $('#AccessToken').val(response.authResponse.accessToken);
-		  });
-
      (function(d){
         var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
         js = d.createElement('script'); js.id = id; js.async = true;
