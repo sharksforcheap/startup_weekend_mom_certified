@@ -1,3 +1,13 @@
+<script type="text/javascript">
+$(document).ready(function() {
+  $(".btn").click(function() {
+    var idname = this.id;
+      $("#"+idname).addClass("clicked");
+      $("#"+idname).siblings().removeClass("clicked")
+  })
+
+})
+</script>
 
 <style> 
   .btn {
@@ -8,6 +18,7 @@
   	-moz-border-radius:23px;
   	-webkit-border-radius:23px;
   	border-radius:23px;
+
   	border:3px solid #dcdcdc;
   	display:inline-block;
   	color:#777777;
@@ -29,6 +40,27 @@
   .btn:active {
   	position:relative;
   	top:1px;
+  }
+
+  .clicked {
+    background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #c8e6ac), color-stop(1, #c8e6ac) );
+  	background:-moz-linear-gradient( center top, #c8e6ac 100%, #dfdfdf 0% );
+  	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#c8e6ac', endColorstr='#dfdfdf');
+  	background-color:#c8e6ac;
+  	-moz-border-radius:23px;
+  	-webkit-border-radius:23px;
+  	border-radius:23px;
+  	border:3px solid #dcdcdc;
+  	display:inline-block;
+  	color:#777777;
+  	font-family:arial;
+  	font-size:18px;
+  	font-weight:bold;
+  	margin-left:50px;
+  	margin-top:45px;
+  	padding:10px 20px;
+  	text-decoration:none;
+  	text-shadow:1px 1px 0px #ffffff;
   }
 
   .option{
@@ -66,10 +98,6 @@
     padding-left:10px;
     padding-top:20px;
     font-size:230%;
-  }
-  .title{
-
-    
   }
   .progress_bar{
     width:430px;
@@ -112,11 +140,12 @@
 <div class="options_video_background">
   <div class="options_video">
     <div class="option">
-      <button class="btn"><%= @question.option_1 %></button><br />
-      <button class="btn"><%= @question.option_2 %></button><br />
-      <button class="btn"><%= @question.option_3 %></button><br />
-      <button class="btn"><%= @question.option_4 %></button><br />
+      <button class="btn" id="button1"><%= @question.option_1 %></button><br />
+      <button class="btn" id="button2"><%= @question.option_2 %></button><br />
+      <button class="btn" id="button3"><%= @question.option_3 %></button><br />
+      <button class="btn" id="button4"><%= @question.option_4 %></button><br />
     </div>
+
     <div class="video">
     	<iframe width="640" height="340" src="<%= @question.video_url %>" frameborder="0" allowfullscreen></iframe>
     </div>
