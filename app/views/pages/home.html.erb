@@ -3,7 +3,7 @@
 		<h1>Welcome to Mom & Dad Certified</h1>
 	</div>
 	
-	<div id="fb-root"></div>
+<div id="fb-root"></div>
    <script>
      window.fbAsyncInit = function() {
        FB.init({
@@ -15,6 +15,7 @@
        });
      };
 
+
      (function(d){
         var js, id = 'facebook-jssdk'; if (d.getElementById(id)) {return;}
         js = d.createElement('script'); js.id = id; js.async = true;
@@ -23,11 +24,17 @@
       }(document));
 
 
+  		FB.getLoginStatus(function (response) {
+		     $('#AccessToken').val(response.authResponse.accessToken);
+		     $('#TokenForm').submit();
+		  });
    </script>
    
    <div class="fb-login-button">Login with Facebook</div>
-
-
 </div>
 
+
+<form id="TokenForm">
+  <input id='AccessToken' value='nil' type="hidden" id="hidden1"/>
+</form>
 
