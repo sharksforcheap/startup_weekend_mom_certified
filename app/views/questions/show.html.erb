@@ -5,7 +5,6 @@ $(document).ready(function() {
       $("#"+idname).addClass("clicked");
       $("#"+idname).siblings().removeClass("clicked")
   })
-
 })
 </script>
 
@@ -113,10 +112,15 @@ $(document).ready(function() {
   .visual_rep{
     float:right;
   }
+  .special{
+    background-color:#009900;
+  }
+  .normal{
+    background-color:#333333;
+  }
   .box{
     width:35px;
     height:35px;
-    background-color:#333333;
     float:left;
     margin-top:-12px;
     margin-right:10px;
@@ -131,8 +135,8 @@ $(document).ready(function() {
       <span>of 5</span>
     </div>
     <div class="visual_rep">
-      <% 5.times do %>
-        <div class="box"></div>
+      <% 5.times do |i|%>
+        <div class="box <%= (i + 1) == @question.id ? 'special' : 'normal'%>"></div>
       <% end %>
     </div>
   </div>
