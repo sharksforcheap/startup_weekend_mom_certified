@@ -11,7 +11,22 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120225233019) do
+ActiveRecord::Schema.define(:version => 20120226003710) do
+
+  create_table "questions", :force => true do |t|
+    t.string   "title"
+    t.string   "video_url"
+    t.string   "option_1"
+    t.string   "option_2"
+    t.string   "option_3"
+    t.string   "option_4"
+    t.string   "option_5"
+    t.string   "option_6"
+    t.string   "option_7"
+    t.string   "option_8"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "name"

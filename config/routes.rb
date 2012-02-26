@@ -1,5 +1,7 @@
 MomAndDad::Application.routes.draw do
-  resources :users
+  resources :users, :questions
+
+
   get "pages/home"
 
   get "pages/about"
