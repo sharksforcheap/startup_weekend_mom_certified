@@ -1,3 +1,4 @@
+
 <head>
 <style> 
 .btn {
@@ -34,3 +35,31 @@
 <button class="btn"><%= @question.option_2 %></button><br />
 <button class="btn"><%= @question.option_3 %></button><br />
 <button class="btn"><%= @question.option_4 %></button><br />
+
+<style>
+
+  .option{
+  	width:400px;
+  	height:400px;
+  	background-color:green;
+  	float:left;
+  }
+  .video{
+  	width:450px;
+  	height:400px;
+  	float:right;
+  }
+</style>
+
+<div class="option">
+	<%= @question.option_1 %>
+</div>
+<div class="video">
+	<iframe width="450" height="400" src="<%= @question.video_url %>" frameborder="0" allowfullscreen></iframe>
+</div>
+
+<div class='bottom'>
+<%= link_to "next", :controller => "questions", :action => "show", :id => @next_question %>
+<%= params %>
+</div>
+
